@@ -1,7 +1,7 @@
 # dispatch-operation
 dispatch和operation操作的示例代码
 
-整改程序的功能是，通过下载15张图片并显示到屏幕上，来展示dispatch和operation的用法。
+整个程序的功能是，通过下载15张图片并显示到屏幕上，来展示dispatch和operation的用法。
 
 可以选择使用dispatch技术进行下载，dispatch技术又支持同步串行、同步并行、异步串行、异步并行四种下载方法。同时提供了针对dispatch队列进行pause和resume的功能。
 
