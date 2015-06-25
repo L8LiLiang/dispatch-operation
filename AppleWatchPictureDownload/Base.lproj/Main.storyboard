@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkE-iY-3by">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="同步串行" id="mtg-V2-s45">
+                                        <connections>
+                                            <action selector="syncSerial:" destination="BYZ-38-t0r" id="fLu-rP-qZN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Reh-dc-bs6"/>
+                                    <barButtonItem title="同步并行" id="pne-0Y-zca">
+                                        <connections>
+                                            <action selector="syncConcurrent:" destination="BYZ-38-t0r" id="Fpf-tu-q8O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LLF-nN-dGm"/>
+                                    <barButtonItem title="异步串行" id="ag8-ZH-LLv">
+                                        <connections>
+                                            <action selector="asyncSerial:" destination="BYZ-38-t0r" id="KBB-Nd-MDL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="k3T-yO-N6w"/>
+                                    <barButtonItem title="异步并行" id="F69-Ke-Kx6">
+                                        <connections>
+                                            <action selector="asyncConcurrent:" destination="BYZ-38-t0r" id="h65-ER-GmG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iQT-92-whq"/>
+                                    <barButtonItem title="pause" id="FGQ-ki-O7V">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="vke-vN-V9E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cQk-Il-EaM"/>
+                                    <barButtonItem title="cancel" id="j3E-4G-KUE">
+                                        <connections>
+                                            <action selector="cancel:" destination="BYZ-38-t0r" id="45E-9f-eP8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="z4z-JU-rbz"/>
+                                    <barButtonItem title="dispatch" id="IFY-ax-swj">
+                                        <connections>
+                                            <action selector="toogleTechnology:" destination="BYZ-38-t0r" id="YKB-mx-K22"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-g5-jQU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E1T-g5-jQU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CLM-wH-Mg2"/>
+                            <constraint firstItem="E1T-g5-jQU" firstAttribute="trailing" secondItem="lkE-iY-3by" secondAttribute="trailing" id="DQP-St-jy2"/>
+                            <constraint firstAttribute="trailing" secondItem="lkE-iY-3by" secondAttribute="trailing" id="HH7-tX-FjA"/>
+                            <constraint firstItem="lkE-iY-3by" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Mzy-My-9H0"/>
+                            <constraint firstAttribute="centerX" secondItem="lkE-iY-3by" secondAttribute="centerX" id="ZZ9-Xs-ufB"/>
+                            <constraint firstItem="E1T-g5-jQU" firstAttribute="leading" secondItem="lkE-iY-3by" secondAttribute="leading" id="aIP-Bg-vzW"/>
+                            <constraint firstItem="E1T-g5-jQU" firstAttribute="bottom" secondItem="lkE-iY-3by" secondAttribute="top" id="gLJ-rR-2Kg"/>
+                            <constraint firstItem="lkE-iY-3by" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hG4-9M-oty"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZZ9-Xs-ufB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cancel" destination="j3E-4G-KUE" id="eL3-UH-CHA"/>
+                        <outlet property="gridView" destination="E1T-g5-jQU" id="jKF-g1-YGC"/>
+                        <outlet property="pause" destination="FGQ-ki-O7V" id="pte-DX-0W8"/>
+                        <outlet property="toogle" destination="IFY-ax-swj" id="klo-Ri-1OX"/>
+                        <outlet property="toolBar" destination="lkE-iY-3by" id="NQJ-AE-rEL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
